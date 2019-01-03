@@ -8,10 +8,24 @@ class App extends Component {
     super(props);
     this.state = {
       sample: [],
+      photos: [],
     };
   }
 
   componentDidMount() {
+    $.ajax({
+      method: 'GET',
+      url: 'https://randomuser.me/api/?results=8&gender=male',
+      dataType: 'json',
+      error: (err) => {
+        console.log(err, 'err');
+      },
+      success: (data) => {
+        this.setState({
+          photos: data,
+        });
+      },
+    });
     $.ajax({
       method: 'GET',
       url: '/stats',
@@ -27,10 +41,10 @@ class App extends Component {
   }
 
   render() {
-    const { sample } = this.state;
+    const { sample, photos } = this.state;
     return (
       <div>
-        <Teamleaders sample={sample} />
+        <Teamleaders sample={sample} photos={photos} />
       </div>
     );
   }

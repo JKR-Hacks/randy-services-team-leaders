@@ -8,7 +8,7 @@
     "server": "nodemon server/index.js rs",
     "db:setup": "node database/seed.js"
   },
-  "author": "Beth Johnson",
+  "author": "Randy Thomas",
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.18.0",
