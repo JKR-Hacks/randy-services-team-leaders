@@ -37,12 +37,10 @@ class Teamleaders extends Component {
           <p className="text-dark font-weight-bold text-center">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input className="btn btn-primary" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
-              {/* <p className="text-dark">Offense</p> */}
+              <input className="btn btn-danger" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input className="btn btn-primary" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
-              {/* <p className="text-dark">Defense</p> */}
+              <input className="btn btn-danger" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
             </div>
           </div>
           <br />
@@ -79,12 +77,10 @@ class Teamleaders extends Component {
           <p className="text-dark font-weight-bold text-center">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input className="btn btn-primary" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
-              {/* <p className="text-dark">Offense</p> */}
+              <input className="btn btn-danger" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input className="btn btn-primary" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
-              {/* <p className="text-dark">Defense</p> */}
+              <input className="btn btn-danger" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
             </div>
           </div>
           <br />
