@@ -23,6 +23,12 @@ class Teamleaders extends Component {
     const rushingYards = Math.max(...Rushing);
     const Receiving = sample.map(elem => elem.Offense.Receiving);
     const receivingYards = Math.max(...Receiving);
+    const Tackles = sample.map(elem => elem.Defense.Tackles);
+    const totalTackles = Math.max(...Tackles);
+    const Sacks = sample.map(elem => elem.Defense.Sacks);
+    const totalSacks = Math.max(...Sacks);
+    const Interceptions = sample.map(elem => elem.Defense.Interceptions);
+    const totalInterceptions = Math.max(...Interceptions);
 
     if (side === 'Offense') {
       return (
@@ -84,22 +90,22 @@ class Teamleaders extends Component {
           <br />
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
-              {/* <p className="text-secondary">{sample.map(elem => (elem.Offense.Passing === passingYards ? elem.Offense.Player : null))}</p> */}
-              {/* <p className="h4 text-center text-dark">{passingYards}</p> */}
+              <p className="text-secondary">{sample.map(elem => (elem.Defense.Tackles === totalTackles ? elem.Defense.Player : null))}</p>
+              <p className="h4 text-center text-dark">{totalTackles}</p>
             </div>
           </div>
           <br />
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
-              {/* <p className="text-secondary">{sample.map(elem => (elem.Offense.Rushing === rushingYards ? elem.Offense.Player : null))}</p>
-              <p className="h4 text-center text-dark">{rushingYards}</p> */}
+              <p className="text-secondary">{sample.map(elem => (elem.Defense.Sacks === totalSacks ? elem.Defense.Player : null))}</p>
+              <p className="h4 text-center text-dark">{totalSacks}</p>
             </div>
           </div>
           <br />
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
-              {/* <p className="text-secondary">{sample.map(elem => (elem.Offense.Receiving === receivingYards ? elem.Offense.Player : null))}</p> */}
-              {/* <p className="h4 text-center text-dark">{receivingYards}</p> */}
+              <p className="text-secondary">{sample.map(elem => (elem.Defense.Interceptions === totalInterceptions ? elem.Defense.Player : null))}</p>
+              <p className="h4 text-center text-dark">{totalInterceptions}</p>
             </div>
           </div>
           <br />
