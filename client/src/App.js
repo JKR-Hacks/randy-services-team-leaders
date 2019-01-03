@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Teamleaders from './components/Teamleaders.jsx';
 
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
     const { sample } = this.state;
     return (
       <div>
-        <h1>HELLO WORLD!</h1>
+        <Teamleaders sample={sample} />
       </div>
     );
   }
