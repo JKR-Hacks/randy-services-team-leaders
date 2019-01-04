@@ -190,6 +190,8 @@ class Teamleaders extends Component {
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
               <img className="rounded-circle" src={players.results[0].picture.medium} alt="player" />
+              <br />
+              <br />
               <p className="text-secondary">{sample.map(elem => (elem.Offense.Passing === passingYards ? elem.Offense.Player : null))}</p>
               <p className="h4 text-center text-dark">{passingYards}</p>
             </div>
@@ -198,6 +200,8 @@ class Teamleaders extends Component {
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
               <img className="rounded-circle" src={players.results[1].picture.medium} alt="player" />
+              <br />
+              <br />
               <p className="text-secondary">{sample.map(elem => (elem.Offense.Rushing === rushingYards ? elem.Offense.Player : null))}</p>
               <p className="h4 text-center text-dark">{rushingYards}</p>
             </div>
@@ -206,6 +210,8 @@ class Teamleaders extends Component {
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
               <img className="rounded-circle" src={players.results[2].picture.medium} alt="player" />
+              <br />
+              <br />
               <p className="text-secondary">{sample.map(elem => (elem.Offense.Receiving === receivingYards ? elem.Offense.Player : null))}</p>
               <p className="h4 text-center text-dark">{receivingYards}</p>
             </div>
@@ -233,6 +239,8 @@ class Teamleaders extends Component {
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
               <img className="rounded-circle" src={players.results[4].picture.medium} alt="player" />
+              <br />
+              <br />
               <p className="text-secondary">{sample.map(elem => (elem.Defense.Tackles === totalTackles ? elem.Defense.Player : null))}</p>
               <p className="h4 text-center text-dark">{totalTackles}</p>
             </div>
@@ -241,6 +249,8 @@ class Teamleaders extends Component {
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
               <img className="rounded-circle" src={players.results[5].picture.medium} alt="player" />
+              <br />
+              <br />
               <p className="text-secondary">{sample.map(elem => (elem.Defense.Sacks === totalSacks ? elem.Defense.Player : null))}</p>
               <p className="h4 text-center text-dark">{totalSacks}</p>
             </div>
@@ -249,6 +259,8 @@ class Teamleaders extends Component {
           <div className="row col-lg">
             <div className=" text-center border-bottom border-secondary">
               <img className="rounded-circle" src={players.results[7].picture.medium} alt="player" />
+              <br />
+              <br />
               <p className="text-secondary">{sample.map(elem => (elem.Defense.Interceptions === totalInterceptions ? elem.Defense.Player : null))}</p>
               <p className="h4 text-center text-dark">{totalInterceptions}</p>
             </div>
