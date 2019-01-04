@@ -172,48 +172,52 @@ class Teamleaders extends Component {
     const Interceptions = sample.map(elem => elem.Defense.Interceptions);
     const totalInterceptions = Math.max(...Interceptions);
 
-    console.log(players, 'PLAYER1');
     if (side === 'Offense') {
       return (
-        <div className="col-lg-3 container alert alert-primary text-center">
-          {console.log(photos, 'PHOTOS')}
-          <p className="text-dark font-weight-bold text-center">2019 Team Leaders:</p>
+        <div id="container" className="col-lg-3 container alert alert-light ">
+          <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input className="btn btn-danger" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
+              <input id="btn" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input className="btn btn-danger" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
+              <input id="btn" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
             </div>
           </div>
           <br />
-          <div className="row col-lg">
-            <div className=" text-center border-bottom border-secondary">
-              <img className="rounded-circle" src={players.results[0].picture.medium} alt="player" />
-              <br />
-              <br />
+          <div className="justify-content-center col">
+            <p className="text-dark font-weight-bold">Passing Yards</p>
+            <div className="border-bottom border-secondary text-center">
+              <div className="text-left">
+                <img className="rounded-circle" src={players.results[0].picture.medium} alt="player" />
+              </div>
               <p className="text-secondary">{sample.map(elem => (elem.Offense.Passing === passingYards ? elem.Offense.Player : null))}</p>
-              <p className="h4 text-center text-dark">{passingYards}</p>
+              <p className="h3 font-weight-bold text-dark">{passingYards}</p>
+              <br />
             </div>
           </div>
           <br />
-          <div className="row col-lg">
-            <div className=" text-center border-bottom border-secondary">
-              <img className="rounded-circle" src={players.results[1].picture.medium} alt="player" />
-              <br />
-              <br />
+          <div className="justify-content-center col">
+            <p className="text-dark font-weight-bold">Rushing Yards</p>
+            <div className="border-bottom border-secondary text-center">
+              <div className="text-left">
+                <img className="rounded-circle" src={players.results[1].picture.medium} alt="player" />
+              </div>
               <p className="text-secondary">{sample.map(elem => (elem.Offense.Rushing === rushingYards ? elem.Offense.Player : null))}</p>
-              <p className="h4 text-center text-dark">{rushingYards}</p>
+              <p className="h3 font-weight-bold text-dark">{rushingYards}</p>
+              <br />
             </div>
           </div>
           <br />
-          <div className="row col-lg">
-            <div className=" text-center border-bottom border-secondary">
-              <img className="rounded-circle" src={players.results[2].picture.medium} alt="player" />
-              <br />
-              <br />
+          <div className="justify-content-center col">
+            <p className="text-dark font-weight-bold">Receiving Yards</p>
+            <div className="border-bottom border-secondary text-center">
+              <div className="text-left">
+                <img className="rounded-circle" src={players.results[2].picture.medium} alt="player" />
+              </div>
               <p className="text-secondary">{sample.map(elem => (elem.Offense.Receiving === receivingYards ? elem.Offense.Player : null))}</p>
-              <p className="h4 text-center text-dark">{receivingYards}</p>
+              <p className="h3 font-weight-bold text-dark">{receivingYards}</p>
+              <br />
             </div>
           </div>
           <br />
@@ -224,45 +228,50 @@ class Teamleaders extends Component {
       );
     } if (side === 'Defense') {
       return (
-        <div className="col-lg-3 container alert alert-primary text-center">
-          {console.log(photos, 'PHOTOS')}
-          <p className="text-dark font-weight-bold text-center">2019 Team Leaders:</p>
+        <div id="container" className="col-lg-3 container alert alert-light ">
+          <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input className="btn btn-danger" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
+              <input id="btn" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input className="btn btn-danger" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
+              <input id="btn" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
             </div>
           </div>
           <br />
-          <div className="row col-lg">
-            <div className=" text-center border-bottom border-secondary">
-              <img className="rounded-circle" src={players.results[4].picture.medium} alt="player" />
-              <br />
-              <br />
+          <div className="justify-content-center">
+            <p className="text-dark font-weight-bold">Tackles</p>
+            <div className="  border-bottom border-secondary text-center">
+              <div className="text-left">
+                <img className="rounded-circle" src={players.results[4].picture.medium} alt="player" />
+              </div>
               <p className="text-secondary">{sample.map(elem => (elem.Defense.Tackles === totalTackles ? elem.Defense.Player : null))}</p>
-              <p className="h4 text-center text-dark">{totalTackles}</p>
+              <p className="h3 font-weight-bold text-dark">{totalTackles}</p>
+              <br />
             </div>
           </div>
           <br />
-          <div className="row col-lg">
-            <div className=" text-center border-bottom border-secondary">
-              <img className="rounded-circle" src={players.results[5].picture.medium} alt="player" />
-              <br />
-              <br />
+          <div className="justify-content-center">
+            <p className="text-dark font-weight-bold">Sacks</p>
+            <div className="  border-bottom border-secondary text-center">
+              <div className="text-left">
+                <img className="rounded-circle" src={players.results[5].picture.medium} alt="player" />
+              </div>
               <p className="text-secondary">{sample.map(elem => (elem.Defense.Sacks === totalSacks ? elem.Defense.Player : null))}</p>
-              <p className="h4 text-center text-dark">{totalSacks}</p>
+              <p className="h3 font-weight-bold text-dark">{totalSacks}</p>
+              <br />
             </div>
           </div>
           <br />
-          <div className="row col-lg">
-            <div className=" text-center border-bottom border-secondary">
-              <img className="rounded-circle" src={players.results[7].picture.medium} alt="player" />
-              <br />
-              <br />
+          <div className="justify-content-center">
+            <p className="text-dark font-weight-bold">Interceptions</p>
+            <div className="border-bottom border-secondary text-center">
+              <div className="text-left">
+                <img className="rounded-circle" src={players.results[7].picture.medium} alt="player" />
+              </div>
               <p className="text-secondary">{sample.map(elem => (elem.Defense.Interceptions === totalInterceptions ? elem.Defense.Player : null))}</p>
-              <p className="h4 text-center text-dark">{totalInterceptions}</p>
+              <p className="h3 font-weight-bold text-dark">{totalInterceptions}</p>
+              <br />
             </div>
           </div>
           <br />
