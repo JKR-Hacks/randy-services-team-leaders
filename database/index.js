@@ -32,10 +32,13 @@ const statsSchema = {
 
 const Stats = mongoose.model('Stats', statsSchema);
 
+
 const save = function () {
   console.log('hi im the save function');
 };
 
 
-const funcs = { db, Stats, save };
+const funcs = {
+  db, Stats, save,
+};
 module.exports = funcs;
