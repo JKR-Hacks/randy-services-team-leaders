@@ -178,45 +178,45 @@ class Teamleaders extends Component {
           <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
+              <input id="btn" className="active" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
+              <input id="btn" className="btn" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
             </div>
           </div>
           <br />
           <div className="justify-content-center col">
             <p className="text-dark font-weight-bold">Passing Yards</p>
-            <div className="border-bottom border-secondary text-center">
+            <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle" src={players.results[0].picture.medium} alt="player" />
+                <img className="rounded-circle float-left" src={players.results[0].picture.medium} alt="player" />
               </div>
-              <p className="text-secondary">{sample.map(elem => (elem.Offense.Passing === passingYards ? elem.Offense.Player : null))}</p>
-              <p className="h3 font-weight-bold text-dark">{passingYards}</p>
+              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Passing === passingYards ? elem.Offense.Player : null))}</p>
+              <p id="playerStats" className="h2 font-weight-bold text-dark">{passingYards}</p>
               <br />
             </div>
           </div>
           <br />
           <div className="justify-content-center col">
             <p className="text-dark font-weight-bold">Rushing Yards</p>
-            <div className="border-bottom border-secondary text-center">
+            <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle" src={players.results[1].picture.medium} alt="player" />
+                <img className="rounded-circle float-left" src={players.results[1].picture.medium} alt="player" />
               </div>
-              <p className="text-secondary">{sample.map(elem => (elem.Offense.Rushing === rushingYards ? elem.Offense.Player : null))}</p>
-              <p className="h3 font-weight-bold text-dark">{rushingYards}</p>
+              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Rushing === rushingYards ? elem.Offense.Player : null))}</p>
+              <p id="playerStats" className="h2 font-weight-bold text-dark">{rushingYards}</p>
               <br />
             </div>
           </div>
           <br />
           <div className="justify-content-center col">
             <p className="text-dark font-weight-bold">Receiving Yards</p>
-            <div className="border-bottom border-secondary text-center">
+            <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle" src={players.results[2].picture.medium} alt="player" />
+                <img className="rounded-circle float-left" src={players.results[2].picture.medium} alt="player" />
               </div>
-              <p className="text-secondary">{sample.map(elem => (elem.Offense.Receiving === receivingYards ? elem.Offense.Player : null))}</p>
-              <p className="h3 font-weight-bold text-dark">{receivingYards}</p>
+              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Receiving === receivingYards ? elem.Offense.Player : null))}</p>
+              <p id="playerStats" className="h2 font-weight-bold text-dark">{receivingYards}</p>
               <br />
             </div>
           </div>
@@ -228,7 +228,7 @@ class Teamleaders extends Component {
       );
     } if (side === 'Defense') {
       return (
-        <div id="container" className="col-lg-3 container alert alert-light ">
+        <div id="container" className="col-md-3 container alert alert-light ">
           <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
@@ -239,38 +239,38 @@ class Teamleaders extends Component {
             </div>
           </div>
           <br />
-          <div className="justify-content-center">
+          <div id="dataContainer" className="justify-content-center">
             <p className="text-dark font-weight-bold">Tackles</p>
-            <div className="  border-bottom border-secondary text-center">
+            <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle" src={players.results[4].picture.medium} alt="player" />
+                <img className="rounded-circle float-left" src={players.results[4].picture.medium} alt="player" />
               </div>
-              <p className="text-secondary">{sample.map(elem => (elem.Defense.Tackles === totalTackles ? elem.Defense.Player : null))}</p>
-              <p className="h3 font-weight-bold text-dark">{totalTackles}</p>
+              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Tackles === totalTackles ? elem.Defense.Player : null))}</p>
+              <p id="playerStats" className="h2 font-weight-bold text-dark">{totalTackles}</p>
               <br />
             </div>
           </div>
           <br />
-          <div className="justify-content-center">
+          <div id="dataContainer" className="justify-content-center">
             <p className="text-dark font-weight-bold">Sacks</p>
-            <div className="  border-bottom border-secondary text-center">
+            <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle" src={players.results[5].picture.medium} alt="player" />
+                <img className="rounded-circle float-left" src={players.results[5].picture.medium} alt="player" />
               </div>
-              <p className="text-secondary">{sample.map(elem => (elem.Defense.Sacks === totalSacks ? elem.Defense.Player : null))}</p>
-              <p className="h3 font-weight-bold text-dark">{totalSacks}</p>
+              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Sacks === totalSacks ? elem.Defense.Player : null))}</p>
+              <p id="playerStats" className="h2 font-weight-bold text-dark">{totalSacks}</p>
               <br />
             </div>
           </div>
           <br />
-          <div className="justify-content-center">
+          <div id="dataContainer" className="justify-content-center">
             <p className="text-dark font-weight-bold">Interceptions</p>
-            <div className="border-bottom border-secondary text-center">
+            <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle" src={players.results[7].picture.medium} alt="player" />
+                <img className="rounded-circle float-left" src={players.results[7].picture.medium} alt="player" />
               </div>
-              <p className="text-secondary">{sample.map(elem => (elem.Defense.Interceptions === totalInterceptions ? elem.Defense.Player : null))}</p>
-              <p className="h3 font-weight-bold text-dark">{totalInterceptions}</p>
+              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Interceptions === totalInterceptions ? elem.Defense.Player : null))}</p>
+              <p id="playerStats" className="h2 font-weight-bold text-dark">{totalInterceptions}</p>
               <br />
             </div>
           </div>
