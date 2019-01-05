@@ -15,19 +15,6 @@ class App extends Component {
   componentDidMount() {
     $.ajax({
       method: 'GET',
-      url: 'https://randomuser.me/api/?results=8&gender=male',
-      dataType: 'json',
-      error: (err) => {
-        console.log(err, 'err');
-      },
-      success: (data) => {
-        this.setState({
-          photos: data,
-        });
-      },
-    });
-    $.ajax({
-      method: 'GET',
       url: '/stats',
       error: (err) => {
         console.log(err, 'err');
@@ -35,6 +22,19 @@ class App extends Component {
       success: (data) => {
         this.setState({
           sample: data,
+        });
+      },
+    });
+    $.ajax({
+      method: 'GET',
+      url: '/photos',
+      dataType: 'json',
+      error: (err) => {
+        console.log(err, 'err');
+      },
+      success: (data) => {
+        this.setState({
+          photos: data,
         });
       },
     });

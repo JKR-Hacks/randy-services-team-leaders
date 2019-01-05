@@ -6,7 +6,8 @@
   "scripts": {
     "react": "webpack -d --watch",
     "server": "nodemon server/index.js rs",
-    "db:setup": "node database/seed.js"
+    "db:setup": "node database/seed.js",
+    "db:secondary": "node database/seed2.js"
   },
   "author": "Randy Thomas",
   "license": "ISC",
