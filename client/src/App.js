@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable import/extensions */
 import React, { Component } from 'react';
 import $ from 'jquery';
 import Teamleaders from './components/Teamleaders.jsx';
@@ -9,6 +11,7 @@ class App extends Component {
     this.state = {
       sample: [],
       photos: [],
+      side: 'Offense',
     };
   }
 
@@ -40,11 +43,17 @@ class App extends Component {
     });
   }
 
+  changeSide(e) {
+    this.setState({
+      side: e,
+    });
+  }
+
   render() {
-    const { sample, photos } = this.state;
+    const { sample, photos, side } = this.state;
     return (
       <div>
-        <Teamleaders sample={sample} photos={photos} />
+        <Teamleaders sample={sample} photos={photos} changeSide={this.changeSide.bind(this)} side={side} />
       </div>
     );
   }
