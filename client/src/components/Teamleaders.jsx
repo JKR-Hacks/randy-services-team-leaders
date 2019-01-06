@@ -1,22 +1,18 @@
+/* eslint-disable no-useless-constructor */
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 
 class Teamleaders extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      side: 'Offense',
-    };
   }
 
-  changeSide(e) {
-    this.setState({
-      side: e,
-    });
-  }
 
   component() {
-    const { sample, photos } = this.props;
-    const { side } = this.state;
+    const {
+      sample, photos, changeSide, side,
+    } = this.props;
+    // const { side } = this.state;
     const Passing = sample.map(elem => elem.Offense.Passing);
     const passingYards = Math.max(...Passing);
     const Rushing = sample.map(elem => elem.Offense.Rushing);
@@ -37,10 +33,10 @@ class Teamleaders extends Component {
           <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
+              <input id="btn" type="button" value="Offense" onClick={() => changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
+              <input id="btn" type="button" value="Defense" onClick={() => changeSide('Defense')} />
             </div>
           </div>
           <br />
@@ -91,10 +87,10 @@ class Teamleaders extends Component {
           <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Offense" onClick={() => this.changeSide('Offense')} />
+              <input id="btn" type="button" value="Offense" onClick={() => changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Defense" onClick={() => this.changeSide('Defense')} />
+              <input id="btn" type="button" value="Defense" onClick={() => changeSide('Defense')} />
             </div>
           </div>
           <br />
