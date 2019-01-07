@@ -53,7 +53,12 @@ class App extends Component {
     const { sample, photos, side } = this.state;
     return (
       <div>
-        <Teamleaders sample={sample} photos={photos} changeSide={this.changeSide.bind(this)} side={side} />
+        <Teamleaders
+          sample={sample}
+          photos={photos}
+          changeSide={this.changeSide.bind(this)}
+          side={side}
+        />
       </div>
     );
   }

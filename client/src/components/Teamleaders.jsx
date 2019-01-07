@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable no-useless-constructor */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
@@ -137,6 +138,7 @@ class Teamleaders extends Component {
       );
     }
     console.log('oops');
+    return null;
   }
 
   render() {
