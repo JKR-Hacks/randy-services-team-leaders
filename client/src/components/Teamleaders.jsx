@@ -45,9 +45,14 @@ class Teamleaders extends Component {
             <p className="text-dark font-weight-bold">Passing Yards</p>
             <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle float-left" src={Photos[3]} alt="player" />
+                <a href="http://www.espn.com/nfl/player/_/id/3046779" target="_blank">
+                  <img className="rounded-circle float-left" src={Photos[3]} alt="player" />
+                </a>
+
               </div>
-              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Passing === passingYards ? elem.Offense.Player : null))}</p>
+              <a href="http://www.espn.com/nfl/player/_/id/3046779" target="_blank">
+                <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Passing === passingYards ? elem.Offense.Player : null))}</p>
+              </a>
               <p id="playerStats" className="h2 font-weight-bold text-dark">{passingYards}</p>
               <br />
             </div>
@@ -57,9 +62,13 @@ class Teamleaders extends Component {
             <p className="text-dark font-weight-bold">Rushing Yards</p>
             <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle float-left" src={Photos[1]} alt="player" />
+                <a href="http://www.espn.com/nfl/player/_/id/2977644" target="_blank">
+                  <img className="rounded-circle float-left" src={Photos[1]} alt="player" />
+                </a>
               </div>
-              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Rushing === rushingYards ? elem.Offense.Player : null))}</p>
+              <a href="http://www.espn.com/nfl/player/_/id/2977644" target="_blank">
+                <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Rushing === rushingYards ? elem.Offense.Player : null))}</p>
+              </a>
               <p id="playerStats" className="h2 font-weight-bold text-dark">{rushingYards}</p>
               <br />
             </div>
@@ -69,9 +78,13 @@ class Teamleaders extends Component {
             <p className="text-dark font-weight-bold">Receiving Yards</p>
             <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle float-left" src={Photos[2]} alt="player" />
+                <a href="http://www.espn.com/nfl/player/_/id/15880" target="_blank">
+                  <img className="rounded-circle float-left" src={Photos[2]} alt="player" />
+                </a>
               </div>
-              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Receiving === receivingYards ? elem.Offense.Player : null))}</p>
+              <a href="http://www.espn.com/nfl/player/_/id/15880" target="_blank">
+                <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Offense.Receiving === receivingYards ? elem.Offense.Player : null))}</p>
+              </a>
               <p id="playerStats" className="h2 font-weight-bold text-dark">{receivingYards}</p>
               <br />
             </div>
@@ -99,9 +112,13 @@ class Teamleaders extends Component {
             <p className="text-dark font-weight-bold">Tackles</p>
             <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle float-left" src={Photos[4]} alt="player" />
+                <a href="http://www.espn.com/nfl/player/_/id/2978304" target="_blank">
+                  <img className="rounded-circle float-left" src={Photos[4]} alt="player" />
+                </a>
               </div>
-              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Tackles === totalTackles ? elem.Defense.Player : null))}</p>
+              <a href="http://www.espn.com/nfl/player/_/id/2978304" target="_blank">
+                <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Tackles === totalTackles ? elem.Defense.Player : null))}</p>
+              </a>
               <p id="playerStats" className="h2 font-weight-bold text-dark">{totalTackles}</p>
               <br />
             </div>
@@ -111,9 +128,13 @@ class Teamleaders extends Component {
             <p className="text-dark font-weight-bold">Sacks</p>
             <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle float-left" src={Photos[5]} alt="player" />
+                <a href="http://www.espn.com/nfl/player/_/id/16716" target="_blank">
+                  <img className="rounded-circle float-left" src={Photos[5]} alt="player" />
+                </a>
               </div>
-              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Sacks === totalSacks ? elem.Defense.Player : null))}</p>
+              <a href="http://www.espn.com/nfl/player/_/id/16716" target="_blank">
+                <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Sacks === totalSacks ? elem.Defense.Player : null))}</p>
+              </a>
               <p id="playerStats" className="h2 font-weight-bold text-dark">{totalSacks}</p>
               <br />
             </div>
@@ -123,9 +144,13 @@ class Teamleaders extends Component {
             <p className="text-dark font-weight-bold">Interceptions</p>
             <div className="border-bottom border-secondary">
               <div className="text-left">
-                <img className="rounded-circle float-left" src={Photos[7]} alt="player" />
+                <a href="http://www.espn.com/nfl/player/_/id/2578378" target="_blank">
+                  <img className="rounded-circle float-left" src={Photos[6]} alt="player" />
+                </a>
               </div>
-              <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Interceptions === totalInterceptions ? elem.Defense.Player : null))}</p>
+              <a href="http://www.espn.com/nfl/player/_/id/2578378" target="_blank">
+                <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Interceptions === totalInterceptions ? elem.Defense.Player : null))}</p>
+              </a>
               <p id="playerStats" className="h2 font-weight-bold text-dark">{totalInterceptions}</p>
               <br />
             </div>
