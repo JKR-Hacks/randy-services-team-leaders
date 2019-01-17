@@ -1,3 +1,4 @@
+const config = require('../config');
 const db = require('./index.js');
 
 const sampleData = [{

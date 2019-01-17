@@ -1,4 +1,5 @@
 const db = require('./index2.js');
+const config = require('../config');
 
 const playerPhotos = [{
   gender: 'male',
